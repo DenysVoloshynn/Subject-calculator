@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  color: rgb(241, 241, 241);
+  font-family: sans-serif;
+}
+body main {
+  margin: 60px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .title {
+  text-align: center;
+  font-size: 35px;
+}
+body main .cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin: 50px auto;
+}
+body main .cards-list .card {
+  padding: 25px 40px;
+  background-color: rgb(33, 33, 33);
+  border: 1px solid rgb(47, 47, 47);
+  border-radius: 15px;
+}
+body main .cards-list .card .subject-name {
+  font-size: 25px;
+}
+body main .cards-list .card .radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 30px);
+  grid-template-rows: 30px;
+  grid-column-gap: 23px;
+  margin-top: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .cards-list .card .radio-wrapper .radio {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+body main .cards-list .card .radio-wrapper .radio input {
+  display: none;
+}
+body main .cards-list .card .radio-wrapper .radio[active] {
+  background-color: rgb(242, 242, 242);
+  color: black;
+}
+body main .middle {
+  font-size: 28px;
+  text-align: center;
+}
+
+@media (max-width: 1230px) {
+  body main .cards-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 830px) {
+  body main .cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 430px) {
+  body main {
+    width: 92%;
+    overflow: hidden;
+  }
+  body main .cards-list .card {
+    width: 100%;
+    padding: 18px 23px;
+  }
+  body main .cards-list .card .radio-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-column-gap: 0px;
+  }
+  body main .cards-list .card .radio-wrapper .radio {
+    width: 30px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */
